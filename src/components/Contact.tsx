@@ -1,12 +1,10 @@
 import { useLanguage } from "../i18n/LanguageContext";
 import { Reveal } from "./Reveal";
-import { ArrowUpRightIcon, DribbbleIcon, GithubIcon, LinkedInIcon, MailIcon } from "./icons";
+import { ArrowUpRightIcon, InstagramIcon, MailIcon } from "./icons";
 
 const socialIcon: Record<string, (props: { className?: string }) => JSX.Element> = {
   Email: MailIcon,
-  LinkedIn: LinkedInIcon,
-  Dribbble: DribbbleIcon,
-  GitHub: GithubIcon,
+  Instagram: InstagramIcon,
 };
 
 export function Contact() {
@@ -34,7 +32,7 @@ export function Contact() {
                 {t.contact.subheading}
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+              <div className="mt-9 flex items-center justify-center">
                 <a
                   href={t.contact.gmailComposeUrl}
                   target="_blank"
@@ -43,12 +41,6 @@ export function Contact() {
                 >
                   {t.contact.ctaLabel}
                   <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-                <a
-                  href={`mailto:${t.contact.email}`}
-                  className="text-sm font-medium text-paper/70 underline decoration-white/25 decoration-2 underline-offset-4 transition-colors hover:text-paper hover:decoration-white/60"
-                >
-                  {t.contact.email}
                 </a>
               </div>
 

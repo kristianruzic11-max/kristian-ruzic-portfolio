@@ -7,7 +7,7 @@
 
 export type Lang = "en" | "hr";
 
-type HeroHeadingPart = { text: string; accent?: boolean };
+type HeroHeadingPart = { text: string; accent?: boolean; size?: "sm" | "lg" };
 
 type ServiceItem = { id: string; title: string; description: string };
 type ProcessStep = { step: string; title: string; description: string };
@@ -26,6 +26,7 @@ export type Content = {
 
   hero: {
     eyebrow: string;
+    preHeading?: string;
     heading: HeroHeadingPart[];
     intro: string;
     ctaLabel: string;
@@ -110,13 +111,14 @@ export const content: Record<Lang, Content> = {
 
     hero: {
       eyebrow: "UI/UX Designer & Web Developer",
+      preHeading: "Hi, I'm Kristian",
       heading: [
-        { text: "I " },
-        { text: "design & build", accent: true },
-        { text: " websites." },
+        { text: "A ", accent: true },
+        { text: "UI/UX Designer & Web Developer", accent: true },
+        { text: "." },
       ],
       intro:
-        "I create modern, responsive and user-focused websites — from the first idea and UI/UX design to the final functional website.",
+        "I design and build digital experiences that are simple, engaging, and made to work.",
       ctaLabel: "View my work",
       ctaHref: "#work",
       secondaryCtaLabel: "Get in touch",
@@ -124,14 +126,14 @@ export const content: Record<Lang, Content> = {
       workflowDesign: "Design",
       workflowDevelopment: "Development",
       workflowLabel: "Workflow",
-      workflowLine: "Figma design → development → live website",
+      workflowLine: "Design and development",
     },
 
     selectedWork: {
       eyebrow: "Selected Work",
-      heading: "Projects designed and built end to end",
+      heading: "Projects designed and built from scratch",
       intro:
-        "A selection of projects taken from first idea to a live, working website — design, structure and code, all in one place.",
+        "A few projects carried from first idea to a live, working website — design, structure and code, all handled in one place.",
     },
 
     projects: {
@@ -197,7 +199,7 @@ export const content: Record<Lang, Content> = {
 
     process: {
       eyebrow: "Process",
-      heading: "From idea to website",
+      heading: "How it comes together",
       steps: [
         {
           step: "01",
@@ -208,7 +210,7 @@ export const content: Record<Lang, Content> = {
           step: "02",
           title: "Design",
           description:
-            "Creating the visual direction, interface and user experience in Figma.",
+            "Creating the visual direction, interface and user experience.",
         },
         {
           step: "03",
@@ -230,9 +232,7 @@ export const content: Record<Lang, Content> = {
 
     social: [
       { label: "Email", href: "mailto:kristianruzic11@gmail.com" },
-      { label: "LinkedIn", href: "#" },
-      { label: "Dribbble", href: "#" },
-      { label: "GitHub", href: "#" },
+      { label: "Instagram", href: "https://www.instagram.com/ruzic.kristian/" },
     ],
 
     footer: {
@@ -264,13 +264,13 @@ export const content: Record<Lang, Content> = {
 
     hero: {
       eyebrow: "UI/UX Dizajner i Web Developer",
+      preHeading: "Bok, ja sam Kristian",
       heading: [
-        { text: "Dizajniram i " },
-        { text: "izrađujem", accent: true },
-        { text: " web stranice." },
+        { text: "UI/UX dizajner i web developer", accent: true },
+        { text: "." },
       ],
       intro:
-        "Izrađujem moderne, responzivne web stranice usmjerene na korisnika — od ideje i UI/UX dizajna do gotove funkcionalne stranice.",
+        "Dizajniram i izrađujem moderne web stranice koje spajaju dobar dizajn, jednostavno korisničko iskustvo i funkcionalnost.",
       ctaLabel: "Pogledaj radove",
       ctaHref: "#work",
       secondaryCtaLabel: "Kontaktiraj me",
@@ -278,7 +278,7 @@ export const content: Record<Lang, Content> = {
       workflowDesign: "Dizajn",
       workflowDevelopment: "Razvoj",
       workflowLabel: "Tijek rada",
-      workflowLine: "Figma dizajn → razvoj → gotova web stranica",
+      workflowLine: "Dizajn i razvoj",
     },
 
     selectedWork: {
@@ -384,9 +384,7 @@ export const content: Record<Lang, Content> = {
 
     social: [
       { label: "Email", href: "mailto:kristianruzic11@gmail.com" },
-      { label: "LinkedIn", href: "#" },
-      { label: "Dribbble", href: "#" },
-      { label: "GitHub", href: "#" },
+      { label: "Instagram", href: "https://www.instagram.com/ruzic.kristian/" },
     ],
 
     footer: {

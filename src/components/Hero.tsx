@@ -44,8 +44,20 @@ export function Hero() {
               </span>
             </Reveal>
 
-            <Reveal delay={80}>
-              <h1 className="balance mt-6 max-w-xl text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-ink-900 sm:text-5xl lg:text-[3.4rem]">
+            {t.hero.preHeading ? (
+              <Reveal delay={80}>
+                <p className="mt-6 text-lg font-medium text-muted sm:text-xl">
+                  {t.hero.preHeading}
+                </p>
+              </Reveal>
+            ) : null}
+
+            <Reveal delay={140}>
+              <h1
+                className={`balance max-w-2xl text-[2.9rem] font-semibold leading-[1.06] tracking-tight text-ink-900 sm:text-6xl lg:text-[4rem] ${
+                  t.hero.preHeading ? "mt-2" : "mt-6"
+                }`}
+              >
                 {t.hero.heading.map((part, i) =>
                   part.accent ? (
                     <span
@@ -55,7 +67,9 @@ export function Hero() {
                       {part.text}
                     </span>
                   ) : (
-                    <span key={i}>{part.text}</span>
+                    <span key={i} className="text-muted">
+                      {part.text}
+                    </span>
                   )
                 )}
               </h1>
